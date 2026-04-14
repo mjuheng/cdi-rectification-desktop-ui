@@ -1,0 +1,195 @@
+// margin 16px
+.mgl16 {
+  margin-left: 16px;
+}
+.mgr16 {
+  margin-right: 16px;
+}
+.mgt16 {
+  margin-top: 16px;
+}
+.mgb16 {
+  margin-bottom: 16px;
+}
+// margin 24px
+.mgr24 {
+  margin-right: 24px;
+}
+// padding 16px
+.pd16{
+  padding: 16px;
+}
+.pdl16 {
+  padding-left: 16px;
+}
+.pdr16 {
+  padding-right: 16px;
+}
+.pdt16 {
+  padding-top: 16px;
+}
+.pdb16 {
+  padding-bottom: 16px;
+}
+
+// flex布局
+.pos-f {
+  position: fixed;
+}
+.pos-a {
+  position: absolute;
+}
+.pos-r {
+  position: relative;
+}
+.flex {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-col-ac {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex-col-jsb {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.flex-jc {
+  display: flex;
+  justify-content: center;
+}
+.flex-jsa {
+  display: flex;
+  justify-content: space-around;
+}
+.flex-jsb {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-ac {
+  display: flex;
+  align-items: center;
+}
+.flex-jsb-ac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-jc-ac {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+.flex1 {
+  flex: 1;
+}
+.flex-r {
+  display: flex;
+  flex-direction: row;
+}
+
+// 设置宽高100%
+.w50b{
+  width: 50%;
+}
+.w100b {
+  width: 100%;
+}
+.h100b {
+  height: 100%;
+}
+.w1 {
+  width: 1px;
+}
+.h1 {
+  height: 1px;
+}
+
+// 图标-鼠标移入显示小手样式
+.cursor {
+  cursor: pointer;
+}
+// 单行文本超出 省略号
+.textOwt {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.prefix-title {
+  position: relative;
+  padding-left: 10px;
+  margin: 24px 0;
+  color: rgba(0, 0, 0, 1);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 3px;
+    height: 16px;
+    background: #0052d9;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+label{
+  font-weight: inherit;
+}
+
+.column-form.t-form-inline {
+  .t-form__item {
+    width: calc(50% - 24px);
+  }
+}
+
+.status-cell {
+  height: 32px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  border-radius: 3px;
+  width: fit-content;
+  &.is-not-complete {
+    background-color: #FDECEE;
+    color: #E34D59;
+  }
+  &.is-review-pass {
+    background-color: #E8F8F2;
+    color: #00A870;
+  }
+  &.is-wait-review {
+    background-color: #ECF2FE;
+    color: #0052d9;
+  }
+  &.is-review-fail {
+    background-color: #FDECEE;
+    color: #E34D59;
+  }
+  &.is-complete {
+    background-color: #E8F8F2;
+    color: #00A870;
+  }
+}
+.narrow-scrollbar::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
