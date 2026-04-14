@@ -35,7 +35,7 @@
     "lowdb": "^7.0.1",
     "path-browserify": "^1.0.1",
     "tdesign-vue": "1.14.1",
-    "vue": "^2.6.14",
+    "vue": "2.6.14",
     "vue-router": "^3.5.1",
     "xlsx": "^0.18.5"
   },
@@ -55,7 +55,7 @@
     "eslint-plugin-vue": "^8.0.3",
     "less": "^4.4.1",
     "less-loader": "^12.3.0",
-    "vue-template-compiler": "^2.6.14",
+    "vue-template-compiler": "2.6.14",
     "wait-on": "^9.0.1"
   },
   "browserslist": [
@@ -113,21 +113,18 @@
         {
           "target": "deb",
           "arch": [
-            "x64",
             "arm64"
           ]
         },
         {
           "target": "AppImage",
           "arch": [
-            "x64",
             "arm64"
           ]
         },
         {
           "target": "rpm",
           "arch": [
-            "x64",
             "arm64"
           ]
         }
