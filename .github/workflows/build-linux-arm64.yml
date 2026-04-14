@@ -1,0 +1,40 @@
+name: Build Linux ARM64
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Linux ARM64
+        run: |
+          # 使用electron-userland/builder Docker镜像进行arm64交叉编译
+          docker run --rm \
+            -v "${{ github.workspace }}:/project" \
+            -w /project \
+            electronuserland/builder:wine \
+            bash -c "npm install && npm run build && npx electron-builder --linux deb --arm64"
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-arm64-packages
+          path: build/*.deb
+          retention-days: 30
