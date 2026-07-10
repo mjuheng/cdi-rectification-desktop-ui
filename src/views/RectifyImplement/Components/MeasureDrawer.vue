@@ -188,7 +188,7 @@ export default {
           cell: person,
           class: "span2",
         },
-        { label: "责任单位:", name: "responsibleDepartment", class: "span2" },
+        { label: "责任部门:", name: "responsibleDepartment", class: "span2" },
 
         {
           label: "是否常态化坚持:",

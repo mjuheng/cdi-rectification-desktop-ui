@@ -30,7 +30,7 @@ export function getConfig() {
               return row?.leaderList?.[0]?.responsibleLeader || "-";
             },
           },
-          { colKey: "responsibleDepartment", title: "责任单位" },
+          { colKey: "responsibleDepartment", title: "责任部门" },
           { colKey: "completeTime", title: "完成时间" },
           {
             colKey: "measureList",

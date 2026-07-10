@@ -203,7 +203,7 @@ export default {
         },
         {
           type: "t-input",
-          label: "责任单位",
+          label: "责任部门",
           name: "responsibleDepartment",
           class: "span3",
           attrs: {
@@ -307,7 +307,7 @@ export default {
         },
         {
           type: "t-input",
-          label: "责任单位",
+          label: "责任部门",
           name: "responsibleDepartment",
           attrs: () => {
             return {
@@ -403,7 +403,8 @@ export default {
                 { label: "追责问责", value: "accountability" },
                 { label: "举一反三", value: "drawInferences" },
                 { label: "是否专项整治", value: "specialRectification" },
-                { label: "重大措施", value: "significantMeasures" },
+                // { label: "重大措施", value: "significantMeasures" },
+                { label: "其它", value: "rectificationOther" },
               ],
               // onChange: (context) => {
               //   console.log(index, context, "sss");
@@ -468,7 +469,8 @@ export default {
         "accountability",
         "drawInferences",
         "specialRectification",
-        "significantMeasures",
+        // "significantMeasures",
+        "rectificationOther",
       ];
       if (!this.measureList.length) {
         this.measureList.push({
@@ -481,7 +483,8 @@ export default {
           accountability: 0,
           drawInferences: 0,
           specialRectification: 0,
-          significantMeasures: 0,
+          // significantMeasures: 0,
+          rectificationOther: 0,
           measureType: [],
         });
       } else {
@@ -499,7 +502,8 @@ export default {
         "accountability",
         "drawInferences",
         "specialRectification",
-        "significantMeasures",
+        // "significantMeasures",
+        "rectificationOther",
       ];
       this.$set(data, "measureType", []);
       checkKeys.forEach((key) => {
@@ -523,7 +527,8 @@ export default {
           accountability: 0,
           drawInferences: 0,
           specialRectification: 0,
-          significantMeasures: 0,
+          // significantMeasures: 0,
+          rectificationOther: 0,
           measureType: [],
         });
       } else {
@@ -554,7 +559,8 @@ export default {
             "accountability",
             "drawInferences",
             "specialRectification",
-            "significantMeasures",
+            "rectificationOther",
+            // "significantMeasures",
           ];
           this.measureList.forEach((item, index) => {
             item.measureType.forEach((key) => {

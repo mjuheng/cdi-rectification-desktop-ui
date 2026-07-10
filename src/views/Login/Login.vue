@@ -745,7 +745,7 @@ export default {
       addItemToTaskArray(
         "SpecialMeetNode-life",
         {
-          title: "召开民主生活化",
+          title: "召开民主生活会",
           fileList: [
             {
               matter: "会议情况报告",

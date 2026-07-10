@@ -53,25 +53,21 @@ export default {
         version: [{ required: true, message: "请选择版本" }],
       },
       unitList: [],
-      versionList:[{
-        label: `第1版`,
-        value: `第1版`,
-      }]
     };
   },
-  // computed: {
-  //   versionList() {
-  //     let arr = [];
-  //     for (let index = 1; index <= 10; index++) {
-  //       arr.push({
-  //         label: `第${index}版`,
-  //         value: `第${index}版`,
-  //       });
-  //     }
-  //     console.log(arr,"arr");
-  //     return arr;
-  //   },
-  // },
+  computed: {
+    versionList() {
+      let arr = [];
+      for (let index = 1; index <= 10; index++) {
+        arr.push({
+          label: `第${index}版`,
+          value: `第${index}版`,
+        });
+      }
+      console.log(arr,"arr");
+      return arr;
+    },
+  },
   async mounted() { },
   methods: {
     async onConfirm() {

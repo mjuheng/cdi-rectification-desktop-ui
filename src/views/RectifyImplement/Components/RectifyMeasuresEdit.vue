@@ -158,6 +158,7 @@ export default {
         specialRectification: "是否专项整治",
         significantMeasures: "重大措施",
         complete: "完成情况",
+        rectificationOther: "其他",
       },
       innerMeasures: [],
       filesMap: {
@@ -167,6 +168,7 @@ export default {
         accountabilityContent: [],
         drawInferencesContent: [],
         specialRectificationContent: [],
+        rectificationOtherContent: [],
         // significantMeasuresContent: [],
       },
       requireUploadFileKey: [
@@ -175,6 +177,7 @@ export default {
         "accountability",
         "drawInferences",
         "specialRectification",
+        "rectificationOther",
         // "significantMeasures",
       ],
       requireKey: ["measuresContent", "completeSituation", "completeContent"],
@@ -270,7 +273,7 @@ export default {
           ],
           [
             {
-              label: "建章立制",
+              label: "完善制度",
               name: "establishSystemContent",
               type: "t-input-number",
               attrs: {
@@ -282,7 +285,7 @@ export default {
                   required: !this.isView
                     ? this.innerMeasures[index]?.establishSystem === 1
                     : false,
-                  message: `请输入建章立制`,
+                  message: `请输入完善制度`,
                 },
                 {
                   validator: (val) => {
@@ -290,11 +293,38 @@ export default {
                       ? val > 0
                       : val > -1;
                   },
-                  message: `请输入建章立制`,
+                  message: `请输入完善制度`,
                 },
               ],
             },
           ],
+          // [
+          //   {
+          //     label: "建章立制",
+          //     name: "establishSystemContent",
+          //     type: "t-input-number",
+          //     attrs: {
+          //       suffix: "项",
+          //       disabled: this.isView ? true : false,
+          //     },
+          //     rules: [
+          //       {
+          //         required: !this.isView
+          //             ? this.innerMeasures[index]?.establishSystem === 1
+          //             : false,
+          //         message: `请输入建章立制`,
+          //       },
+          //       {
+          //         validator: (val) => {
+          //           return this.innerMeasures[index]?.establishSystem === 1
+          //               ? val > 0
+          //               : val > -1;
+          //         },
+          //         message: `请输入建章立制`,
+          //       },
+          //     ],
+          //   },
+          // ],
           [
             {
               label: "挽回损失",
@@ -399,6 +429,33 @@ export default {
                       : val > -1;
                   },
                   message: `请输入专项整治`,
+                },
+              ],
+            },
+          ],
+          [
+            {
+              label: "其他",
+              name: "rectificationOtherContent",
+              // type: "t-input-number",
+              // attrs: {
+              //   suffix: "项",
+              //   disabled: this.isView ? true : false,
+              // },
+              rules: [
+                {
+                  required: !this.isView
+                      ? this.innerMeasures[index]?.rectificationOther === 1
+                      : false,
+                  message: `请输入其他`,
+                },
+                {
+                  validator: (val) => {
+                    return this.innerMeasures[index]?.rectificationOther === 1
+                        ? val > 0
+                        : val > -1;
+                  },
+                  message: `请输入其他`,
                 },
               ],
             },
@@ -611,6 +668,7 @@ export default {
         accountabilityContent: 0, //
         drawInferencesContent: 0, //
         specialRectificationContent: 0, //
+        rectificationOtherContent:0 ,
       };
       this.innerMeasures = deepCopy(val).map((o) => {
         let [requireKey, requireUploadFileCount] = [
@@ -642,6 +700,7 @@ export default {
             accountabilityContent: [],
             drawInferencesContent: [],
             specialRectificationContent: [],
+            rectificationOtherContent: [],
           },
         };
       });

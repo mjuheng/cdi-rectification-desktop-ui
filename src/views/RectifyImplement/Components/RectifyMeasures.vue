@@ -56,6 +56,7 @@ export default {
         drawInferences: "举一反三",
         specialRectification: "是否专项整治",
         significantMeasures: "重大措施",
+        rectificationOther: "其他",
       },
     };
   },

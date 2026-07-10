@@ -43,7 +43,7 @@ window.APP_CONFIG = {
   apiBaseUrl: process.env.VUE_APP_API_BASE_URL || 'http://localhost:3000/api',
   debug: process.env.VUE_APP_DEBUG === 'true',
   // isProvince: process.env.VUE_APP_IS_PROVINCE === 'true',
-  isProvince: false,//是否是省
+  isProvince: true,//是否是省 false
 }
 
 // 开发环境下打印环境信息
